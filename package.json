@@ -1,0 +1,47 @@
+{
+  "name": "create-new-project",
+  "displayName": "create-new-project",
+  "description": "",
+  "version": "0.0.1",
+  "publisher": "ChuckHendo",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.newProject",
+    "onCommand:extension.newProjectTemplate",
+    "onCommand:extension.editProjectTemplate"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.newProject",
+        "title": "Create New Project"
+      },
+      {
+        "command": "extension.newProjectTemplate",
+        "title": "Create New Project Template"
+      },
+      {
+        "command": "extension.editProjectTemplate",
+        "title": "Edit Project Template"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "fs-extra": "^0.30.0"
+  }
+}
